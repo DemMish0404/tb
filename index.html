@@ -199,6 +199,9 @@
       .error{
          text-align: center;
       }
+      .error:not(:last-child){
+         margin-top: 1.125rem;
+      }
       .form-scndbclk__textarea {
          border-radius: 5px;
          border: 2px solid #BBB;
@@ -228,7 +231,7 @@
       .btn-small {
          max-width: 220px;
          
-      
+         
          
          padding: 1rem 1.4375rem;
          
@@ -422,7 +425,7 @@
             <textarea class="form-scndbclk__textarea" name="" id="request-description"></textarea>
             
       
-            <button class="secondblock__button btn btn-small" id="order">оставить заявку</button>
+            <button  class="secondblock__button btn btn-small" id="order">оставить заявку</button>
          </form>
       </div>
       
@@ -449,7 +452,7 @@
          let name = document.getElementById("user_name").value;
          let email = document.getElementById("user_email").value;
          let phone = document.getElementById("user_phone").value;
-         let description = document.getElementById("request-description").value;
+         let description = document.getElementById("request_description").value;
 
          if(name.lenght < 5 ){
             document.getElementById("error").innerText = 'Ошибка в имени';
@@ -463,7 +466,7 @@
             document.getElementById("error").innerText = 'Ошибка в телефоне';
             return;
          }
-         if(request-description < 30 ){
+         if(description < 30 ){
             document.getElementById("error").innerText = 'Опишите сырье подробнее';
             return;
          }
